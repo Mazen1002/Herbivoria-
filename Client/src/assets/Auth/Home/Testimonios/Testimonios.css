@@ -1,0 +1,84 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Testimonios
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Testimonios {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  z-index: 1;
+}
+.Testimonios .container .head h1 {
+  position: relative;
+  margin: 0 0 30px 0;
+  color: var(--red-color);
+  text-shadow: var(--main-text-shadow-red);
+  text-transform: capitalize;
+}
+.Testimonios .container .head p {
+  position: relative;
+  font-weight: bold;
+  color: var(--gray-color);
+  letter-spacing: 1px;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.aws-btn {
+  --slider-height-percentage: 350px;
+  --slider-transition-duration: 575ms;
+  --organic-arrow-thickness: 4px;
+  --organic-arrow-border-radius: 5px;
+  --organic-arrow-height: 15px;
+  --organic-arrow-color: var(--red-color);
+  --control-button-width: 10%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: var(--bg-color);
+  --control-bullet-active-color: var(--red-color);
+  --loader-bar-color: transparent;
+  --loader-bar-height: 0px;
+}
+.awssld,
+.awssld__container {
+  min-height: 350px !important;
+  max-height: 100vh !important;
+}
+.awssld__content {
+  background-color: transparent !important;
+}
+.awssld__timer.awssld__timer--animated.awssld__timer--run,
+.awssld__timer.awssld__timer--run {
+  background-color: transparent !important;
+  height: 0 !important;
+}
+.Testimonios .aws-btn .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+.Testimonios .aws-btn .box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.Testimonios .aws-btn .box h5 {
+  font-size: 18px;
+  color: var(--main-color);
+}
+.Testimonios .aws-btn .box p {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.7;
+}
+@media (max-width: 992px) {
+  .Testimonios .aws-btn .box p {
+    width: 90%;
+  }
+}

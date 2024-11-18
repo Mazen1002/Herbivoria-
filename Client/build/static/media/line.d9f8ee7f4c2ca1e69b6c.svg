@@ -1,0 +1,24 @@
+<svg width="1650" height="720" xmlns="http://www.w3.org/2000/svg" fill="none">
+ <defs>
+  <filter id="filter0_d" x="3.60815" y="-0.5" width="1642.39" height="727" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="9"/>
+  </filter>
+  <clipPath id="clip0">
+   <rect width="1650" height="720" fill="white" id="svg_1"/>
+  </clipPath>
+  <linearGradient id="paint0_linear" x1="0.94272" y1="0.03985" x2="0.02279" y2="0.88333">
+   <stop stop-color="#ff0000"/>
+   <stop offset="0.5" stop-color="#ff0000"/>
+   <stop offset="1" stop-color="#ff0000"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g clip-path="url(#clip0)" id="svg_2">
+   <g filter="url(#filter0_d)" id="svg_3"/>
+   <path d="m2.38889,257.61114c21,26.5 116.5,462.99997 281.00001,450.99997c164.50001,-12 404,-690.77776 654.49999,-658.77776c250.49999,32 309.99999,295.27778 433,277.27778c123.00001,-18 277.7222,-178.55559 269,-160.50003" stroke="url(#paint0_linear)" stroke-width="1" id="svg_5"/>
+   <path d="m8.38889,424.55557c21,26.5 120.5,131 285.00001,119c164.50001,-11.99999 402.6111,-446.3333 653.1111,-414.33331c250.49999,32 311.38888,50.83333 434.38889,32.83333c123.00001,-18 138.83332,-110.50003 157.88889,-164.6667" stroke="url(#paint0_linear)" stroke-width="8" id="svg_6"/>
+   <path d="m12.3889,327.61114c21,26.5 120.49999,286.99998 285,274.99998c164.50001,-12 404,-537.99998 654.49999,-505.99998c250.5,32 309.99999,142.5 433,124.5c123.00002,-18 267.99998,-160.50003 269,-160.50003" stroke="url(#paint0_linear)" stroke-width="1" id="svg_7"/>
+  </g>
+ </g>
+</svg>

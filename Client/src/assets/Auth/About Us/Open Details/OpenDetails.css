@@ -1,0 +1,69 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Open Details
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.OpenDetails {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  width: 100%;
+}
+
+.OpenDetails .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.OpenDetails .container .head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 30px 0;
+  width: 100%;
+}
+.OpenDetails .container .head h1 {
+  position: relative;
+  color: var(--red-color);
+  text-shadow: var(--main-text-shadow-red);
+  text-transform: capitalize;
+}
+.OpenDetails .container .head p {
+  position: relative;
+  font-weight: bold;
+  color: var(--gray-color);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.OpenDetails .card ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: var(--main-transition);
+}
+.OpenDetails .card ul li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-color);
+  transition: var(--main-transition);
+}
+.OpenDetails .card ul li.active {
+  border-bottom: 1px solid var(--red-color);
+}
+.OpenDetails .card ul li span {
+  position: relative;
+  color: var(--gray-color);
+  transition: var(--main-transition);
+}
+.OpenDetails .card ul li.active span {
+  color: var(--red-color);
+}

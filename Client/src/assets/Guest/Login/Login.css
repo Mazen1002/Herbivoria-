@@ -1,0 +1,204 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Login
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.login {
+  position: relative;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Login container
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.login .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Login login card
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.login .loginCard {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 18px -1px rgba(221, 221, 221, 0.75);
+  margin: 50px auto;
+}
+@media (max-width: 992px) {
+  .login .loginCard {
+    flex-direction: column-reverse;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Login right 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.login .loginCard .right {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+.login .right img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Login left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.login .left {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+
+.login .left .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login .left .content h2 {
+  position: relative;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--red-color);
+}
+
+.login .left .content p {
+  color: var(--gray-color);
+  font-size: 14px;
+}
+.login .left .content p.Error:empty {
+  display: none;
+}
+.login .left .content p.Error {
+  color: var(--red-color);
+  font-size: 12px;
+}
+.login .left .content img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.login .left .content .input-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.login .left .content .input-card input {
+  position: relative;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border: 1px solid var(--bg-color);
+  font-size: 14px;
+  border-radius: 5px;
+  transition: var(--main-transition);
+}
+.login .left .content .input-card input:focus {
+  outline: 0;
+}
+.login .left .content .input-card input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+.login .left .content .input-card input:focus {
+  border: 1px solid var(--red-color);
+}
+
+.login .left .content .input-remember {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.login .left .content .input-remember > a {
+  color: var(--gray-color);
+  font-size: 14px;
+  font-weight: bold;
+  transition: var(--main-transition);
+  text-shadow: var(--main-text-shadow);
+}
+.login .left .content .input-remember > a:hover {
+  color: var(--red-color);
+  text-shadow: var(--main-text-shadow-red);
+}
+.login .left .content .input-remember .input-check {
+  position: relative;
+}
+.login .left .content .input-remember .input-check input {
+  display: none;
+}
+.login .left .content .input-remember .input-check label {
+  color: var(--gray-color);
+  padding: 10px 0 10px 30px;
+  transition: var(--main-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.login .left .content .input-remember .input-check label::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--red-color);
+  left: 0;
+  border-radius: 0.5em;
+  transition: var(--main-transition);
+  transform: rotate(360deg);
+}
+.login .left .input-remember .input-check input:checked + label::before {
+  content: "\f00c";
+  background-color: var(--red-color);
+  transform: rotate(0);
+}
+.login .left .content .input-card button {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: var(--main-text-shadow-red);
+  background-color: var(--red-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.login .left .content .input-card button:hover {
+  background-color: transparent;
+  box-shadow: var(--main-box-shadow);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+.login .left .content > p a {
+  color: var(--red-color);
+  font-weight: bold;
+}

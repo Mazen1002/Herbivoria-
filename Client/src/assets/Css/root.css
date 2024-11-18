@@ -1,0 +1,45 @@
+:root {
+  --main-color: #070505;
+  --main-color-alt: #141212;
+  --purple-color: #005249;
+  --red-color: #ff0000;
+  --bg-color: #eee;
+  --white-color: #f9f9f9;
+  --gray-color: #888;
+  --border-color: #707070;
+  --main-transition: all 0.5s ease-in-out;
+  --main-padding-top: 50px;
+  --main-padding-bottom: 50px;
+  --main-box-shadow: 0px 5px 20px 1px rgba(69, 69, 69, 0.18);
+  --main-box-shadow-red: 0px 3px 50px 5px rgba(255, 0, 0, 0.2);
+  --main-text-shadow: 0px 3px 10px rgba(223, 223, 223, 0.7);
+  --main-text-shadow-red: 0px 3px 5px rgba(255, 0, 0, 0.2);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# back-to-top
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.back-to-top {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-color);
+  z-index: -1;
+  color: #fff;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: var(--main-transition);
+  opacity: 0;
+}
+.back-to-top:hover {
+  background-color: #c60303;
+}
+.back-to-top.active {
+  opacity: 1;
+  z-index: 9999;
+}

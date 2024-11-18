@@ -1,0 +1,130 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Our Chefs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.OurChefs {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  width: 100%;
+}
+.OurChefs .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.OurChefs .container .head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 30px 0;
+  width: 100%;
+}
+.OurChefs .container .head h1 {
+  position: relative;
+  color: var(--red-color);
+  text-shadow: var(--main-text-shadow-red);
+  text-transform: capitalize;
+}
+.OurChefs .container .head p {
+  position: relative;
+  font-weight: bold;
+  color: var(--gray-color);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.OurChefs .container .content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 5px;
+  width: 100%;
+}
+
+.OurChefs .container .content .card {
+  position: relative;
+  width: 100%;
+  background-color: var(--white-color);
+  box-shadow: var(--main-box-shadow);
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: var(--main-transition);
+}
+.OurChefs .container .Chef-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.OurChefs .container .Chef-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../imgs/chefs/team-shape.svg");
+  background-repeat: no-repeat;
+  bottom: -2px;
+  left: 0;
+  background-size: contain;
+  background-position: bottom center;
+}
+.OurChefs .container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.OurChefs .container .card .info {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.OurChefs .container .card .info h3 {
+  position: relative;
+  color: var(--main-color);
+}
+.OurChefs .container .card .info p {
+  position: relative;
+  font-weight: bold;
+  color: var(--border-color);
+}
+.OurChefs .container .card .info span {
+  color: var(--border-color);
+  font-style: italic;
+  font-size: 14px;
+  padding-top: 15px;
+  line-height: 26px;
+  color: var(--gray-color);
+}
+.OurChefs .container .card .social {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: var(--main-transition);
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  padding: 10px;
+}
+.OurChefs .container .card .social a {
+  color: rgba(55, 55, 63, 0.4);
+  transition: var(--main-transition);
+}
+.OurChefs .container .card .social a:hover {
+  color: var(--main-color);
+}
+.OurChefs .container .card:hover {
+  transform: scale(1.02);
+  z-index: 2;
+}
+.OurChefs .container .card:hover .social {
+  right: 10px;
+  opacity: 1;
+}

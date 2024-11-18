@@ -1,0 +1,139 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--bg-color);
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.footer .container .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .container .box .head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--red-color);
+}
+.footer .container .box .head img {
+  position: relative;
+  width: 62px;
+  height: 62px;
+}
+.footer .container .box .content-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.footer .container .box .content-box a {
+  position: relative;
+  color: var(--gray-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.footer .container .box .content-box a:hover {
+  color: var(--purple-color);
+  padding-left: 10px;
+}
+.footer .container .box .content-box .contact {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .container .box .content-box .contact i {
+  color: var(--red-color);
+}
+.footer .container .box .content-box .contact span,
+.footer .container .box .content-box p {
+  position: relative;
+  font-size: 14px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  color: var(--gray-color);
+  font-weight: bold;
+}
+.footer .container .box .content-box .email-content-box {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  transition: var(--main-transition);
+  border-radius: 25px;
+}
+.footer .container .box .content-box .email-content-box input {
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  color: var(--main-color);
+}
+.footer .container .box .content-box .email-content-box input:focus {
+  outline: 0;
+}
+.footer
+  .container
+  .box
+  .content-box
+  .email-content-box
+  input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.footer .container .box .content-box .email-content-box button {
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--red-color);
+  cursor: pointer;
+  border: 0;
+  background-color: var(--bg-color);
+  transition: var(--main-transition);
+}
+.footer .container .box .content-box .email-content-box button:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+.footer .container .box .content-box .social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer .container .box .content-box .social i {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background-color: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.footer .container .box .content-box .social i:hover {
+  background-color: var(--red-color);
+}

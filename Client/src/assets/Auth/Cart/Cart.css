@@ -1,0 +1,528 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  width: 100%;
+  transition: var(--main-transition);
+}
+.Cart .container {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 992px) {
+  .Cart .container {
+    flex-direction: column-reverse;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .container .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart box general
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .container .left .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--main-transition);
+}
+.Cart .container .left .box h1 {
+  color: var(--main-color);
+  font-size: 25px;
+  transition: var(--main-transition);
+  margin: 0 0 20px 0;
+  text-shadow: var(--main-text-shadow);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart First Box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .container .left .box .input-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+.Cart .container .left .box .input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+  width: 100%;
+}
+.Cart .container .left .box .input-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px 12px 10px 0;
+  border: none;
+  border-bottom: 1.5px solid var(--bg-color);
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.Cart .container .left .box .input-box label {
+  position: relative;
+  color: var(--gray-color);
+  font-size: 14px;
+  transition: var(--main-transition);
+}
+.Cart .container .left .box .input-box input:focus {
+  outline: 0;
+  border-bottom: 1.5px solid var(--red-color);
+  transition: var(--main-transition);
+}
+.Cart .container .left .box .input-box input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.Cart .container .left .box .input-box input::placeholder {
+  color: var(--main-color);
+  opacity: 0.2;
+}
+.Cart .container .left .box .input-box input:focus + label {
+  color: var(--red-color);
+  font-weight: 500;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart 2nd box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .container .left .box .input-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.Cart .container .left .box .input-check input {
+  display: none;
+}
+.Cart .container .left .box .input-check label {
+  position: relative;
+  padding: 10px 0px 10px 30px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  width: 100%;
+}
+.Cart .container .left .box .input-check label::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-color);
+  left: 0px;
+  font-size: 11px;
+  transition: var(--main-transition);
+  transform: rotate(360deg);
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+}
+
+.Cart .container .left .box .input-check input:checked + label::before {
+  content: "\f00c";
+  background-color: var(--red-color);
+  border: 2px solid var(--red-color);
+  color: var(--white-color);
+  transform: rotate(0deg);
+}
+.Cart .container .left .box .Select-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Cart .container .left .box .Select-box label {
+  position: relative;
+  color: var(--gray-color);
+  font-size: 14px;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart 4rd box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .container .left .payment-box {
+  position: relative;
+  width: 100%;
+  animation: opacity-move 0.5s ease-in-out;
+  transition: var(--main-transition);
+}
+@keyframes opacity-move {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.Cart .container .left .payment-box .input-container {
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.Cart .container .left .payment-box .input-check label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+}
+.Cart .container .left .payment-box .input-check label::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+.Cart .container .left .payment-box .input-check input label img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.Cart .container .left .payment-box .input-check input:checked + label::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+.Cart .container .left .add-save {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.Cart .container .left .add-save button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: var(--main-transition);
+  font-weight: 500;
+  color: var(--gray-color);
+}
+.Cart .container .left .add-save button i {
+  color: var(--red-color);
+}
+.Cart .container .left .add-save .input-togle {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.Cart .container .left .add-save .input-togle input {
+  display: none;
+}
+.Cart .container .left .add-save .input-togle span {
+  position: relative;
+  color: var(--gray-color);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.Cart .container .left .add-save .input-togle .toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1px solid var(--gray-color);
+  background-color: #fff;
+  transition: var(--main-transition);
+}
+.Cart .container .left .add-save .input-togle input:checked + .toggle-switch {
+  background-color: var(--red-color);
+  border: 1px solid var(--red-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+.Cart .container .left .add-save .input-togle .toggle-switch::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  transition: var(--main-transition);
+}
+.Cart
+  .container
+  .left
+  .add-save
+  .input-togle
+  input:checked
+  + .toggle-switch::before {
+  left: 28px;
+  background-color: var(--white-color);
+  transition: var(--main-transition);
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .right {
+  position: relative;
+  height: fit-content;
+  min-width: 350px;
+  padding: 20px;
+  border: 2px dashed var(--bg-color);
+  border-radius: 15px;
+}
+.Cart .right .order {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid var(--bg-color);
+  padding: 0 0 20px 0;
+}
+.Cart .right .order > p {
+  position: relative;
+  color: var(--border-color);
+}
+.Cart .right .order .food-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.Cart .right .order .food-box:not(:last-child) {
+  border-bottom: 2px dashed var(--bg-color);
+}
+.Cart .right .order .food-box > i {
+  position: absolute;
+  min-width: 25px;
+  max-width: 25px;
+  height: 25px;
+  left: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--main-box-shadow-red);
+  background-color: var(--red-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transform: scale(0);
+  transition: var(--main-transition);
+}
+.Cart .right .order .food-box > i:hover {
+  background-color: var(--bg-color);
+  color: var(--gray-color);
+  box-shadow: var(--main-box-shadow);
+}
+.Cart .right .order .food-box:hover > i {
+  transform: scale(1);
+}
+.Cart .right .order .food-box .food-box-left,
+.Cart .right .order .food-box .food-box-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Cart .right .order .food-box .food-box-right {
+  flex-direction: column;
+}
+.Cart .right .order .food-box .food-box-left .img-box {
+  position: relative;
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+.Cart .right .order .food-box .food-box-left .img-box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Cart .right .order .food-box .food-box-left .data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Cart .right .order .food-box .food-box-left h5 {
+  position: relative;
+  color: var(--main-color);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.Cart .right .order .food-box .food-box-left p {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--gray-color);
+}
+
+.Cart .right .order .food-box .food-box-right .actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Cart .right .order .food-box .food-box-right button {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: var(--main-box-shadow);
+  background-color: var(--bg-color);
+  color: var(--gray-color);
+  transition: var(--main-transition);
+}
+
+.Cart .right .order .food-box .food-box-right button:hover {
+  background-color: var(--red-color);
+  color: var(--bg-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+.Cart .right .order .food-box .food-box-right p {
+  color: var(--gray-color);
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart right .total-price
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .right .total-price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--bg-color);
+}
+.Cart .right .total-price .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.Cart .right .total-price .box p {
+  color: var(--gray-color);
+  font-size: 16px;
+}
+.Cart .right .total-price .box span {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 14px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart right .final-price
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .right .final-price {
+  position: relative;
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.Cart .right .final-price .box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.Cart .right .final-price .box p {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: var(--main-transition);
+}
+.Cart .right .final-price .box span {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: var(--main-transition);
+}
+.Cart .right .final-price button {
+  position: relative;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  box-shadow: var(--main-box-shadow-red);
+  border: 0;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.Cart .right .final-price > p {
+  position: relative;
+  color: var(--gray-color);
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.7;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Cart right no items 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Cart .right .no-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.Cart .right .no-items p {
+  color: var(--gray-color);
+  text-align: center;
+}

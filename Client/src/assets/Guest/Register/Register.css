@@ -1,0 +1,256 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Register
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Register {
+  position: relative;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Register container
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Register .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Register Register card
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Register .RegisterCard {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 18px -1px rgba(221, 221, 221, 0.75);
+}
+@media (max-width: 992px) {
+  .Register .RegisterCard {
+    flex-direction: column-reverse;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Register right 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Register .RegisterCard .right {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+.Register .right img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Register left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Register .left {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+
+.Register .left .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Register .left .content h2 {
+  position: relative;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--red-color);
+}
+
+.Register .left .content p {
+  color: var(--gray-color);
+  font-size: 14px;
+}
+.Register .left .content p.Error:empty {
+  display: none;
+}
+.Register .left .content p.Error {
+  color: var(--red-color);
+  font-size: 12px;
+}
+.Register .left .content img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.Register .left .content .Flex-card {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.Register .left .content .input-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.Register .left .content .input-card input {
+  position: relative;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border: 1px solid var(--bg-color);
+  font-size: 14px;
+  border-radius: 5px;
+  transition: var(--main-transition);
+}
+.Register .left .content .input-card input:focus {
+  outline: 0;
+}
+.Register .left .content .input-card input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+.Register .left .content .input-card input:focus {
+  border: 1px solid var(--red-color);
+}
+
+.Register .left .content .input-remember {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.Register .left .content .input-remember > a {
+  color: var(--gray-color);
+  font-size: 14px;
+  font-weight: bold;
+  transition: var(--main-transition);
+  text-shadow: var(--main-text-shadow);
+}
+.Register .left .content .input-remember > a:hover {
+  color: var(--red-color);
+  text-shadow: var(--main-text-shadow-red);
+}
+.Register .left .content .input-remember .input-check {
+  position: relative;
+}
+.Register .left .content .input-remember .input-check input {
+  display: none;
+}
+.Register .left .content .input-remember .input-check label {
+  color: var(--gray-color);
+  padding: 10px 0 10px 30px;
+  transition: var(--main-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Register .left .content .input-remember .input-check label::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--red-color);
+  left: 0;
+  border-radius: 0.5em;
+  transition: var(--main-transition);
+  transform: rotate(360deg);
+}
+.Register .left .input-remember .input-check input:checked + label::before {
+  content: "\f00c";
+  background-color: var(--red-color);
+  transform: rotate(0);
+}
+.Register .left .content .input-card button {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: var(--main-text-shadow-red);
+  background-color: var(--red-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.Register .left .content .input-card button:hover {
+  background-color: transparent;
+  box-shadow: var(--main-box-shadow);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+.Register .left .content > p a {
+  color: var(--red-color);
+  font-weight: bold;
+}
+
+.Register .left .content-gender {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Register .left .content-gender .input-check {
+  position: relative;
+}
+.Register .left .content-gender .input-check input {
+  display: none;
+}
+.Register .left .content-gender .input-check label {
+  color: var(--gray-color);
+  padding: 10px 0 10px 30px;
+  transition: var(--main-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Register .left .content-gender .input-check label::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--red-color);
+  left: 0;
+  border-radius: 2px;
+  transition: var(--main-transition);
+  transform: rotate(360deg);
+}
+.Register .left .content-gender .input-check input:checked + label::before {
+  content: "\f00c";
+  background-color: var(--red-color);
+  transform: rotate(0);
+}

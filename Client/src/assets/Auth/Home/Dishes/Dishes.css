@@ -1,0 +1,254 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# dishes
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.dishes {
+  position: relative;
+  width: 100%;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.dishes .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dishes .container .head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.dishes .container .head p {
+  position: relative;
+  font-weight: bold;
+  color: var(--gray-color);
+  letter-spacing: 1px;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.dishes .container .head h1 {
+  position: relative;
+  color: var(--red-color);
+  text-transform: capitalize;
+  text-shadow: var(--main-text-shadow-red);
+}
+.dishes .container .dishes-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+@media (max-width: 500px) {
+  .dishes .container .dishes-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# dishes box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.dishes .container .box {
+  position: relative;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+  align-self: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--main-box-shadow);
+}
+.dishes .container .box .Favorite-ele {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  transition: var(--main-transition);
+  color: var(--gray-color);
+}
+.dishes .container .box .Favorite-ele:hover {
+  font-weight: bold;
+  color: var(--red-color);
+}
+.dishes .container .box .price {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  height: 80px;
+  writing-mode: vertical-lr;
+  text-align: right;
+  background-color: var(--red-color);
+  font-weight: bold;
+  color: var(--white-color);
+  z-index: 5;
+  padding: 5px 12px;
+  border-radius: 0 5px 0px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.dishes .container .box .price::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  border-width: 22px;
+  border-style: solid;
+  border-color: var(--red-color) var(--red-color) transparent var(--red-color);
+  transition: var(--main-transition);
+}
+@media (max-width: 500px) {
+  .dishes .container .box .price {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  .dishes .container .box .price::before {
+    border-width: 16px;
+  }
+}
+.dishes .container .box::before {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 350px;
+  background-image: url("../../../imgs/salt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -50px;
+  left: -50px;
+  z-index: 1;
+  transform: rotateY(180deg) translateY(-50px);
+}
+.dishes .container .box::after {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 350px;
+  background-image: url("../../../imgs/salt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -50px;
+  right: -50px;
+  z-index: 1;
+  transform: rotateY(150deg) translateX(-150px);
+}
+.dishes .container .box .Content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.dishes .container .box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: rotateZ(60.3806deg);
+  transform-style: preserve-3d;
+  transition: var(--main-transition);
+  animation: rotate 1.5s ease-in-out alternate-reverse;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(60.3806deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+.dishes .container .box h5 {
+  position: relative;
+  z-index: 2;
+  color: var(--red-color);
+  transition: var(--main-transition);
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.dishes .container .box p {
+  color: var(--gray-color);
+  z-index: 2;
+  text-overflow: ellipsis;
+  line-height: 1.7;
+}
+@media (max-width: 500px) {
+  .dishes .container .box h5 {
+    font-size: 18px;
+  }
+  .dishes .container .box p {
+    font-size: 12px;
+  }
+}
+.dishes .container .box .btn {
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  padding: 8px 14px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 14px;
+  transition: var(--main-transition);
+
+  box-shadow: var(--main-box-shadow-red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+.dishes .container .box .btn.active {
+  background-color: var(--white-color);
+  color: var(--red-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu nav-seemore
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.dishes .container .PaginationSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.dishes .container .PaginationSection .pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.dishes .container .PaginationSection .pagination .page-item {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--white-color);
+  transition: var(--main-transition);
+}
+.dishes .container .PaginationSection .pagination .page-item .page-link {
+  color: var(--red-color);
+}
+
+.dishes .container .PaginationSection .pagination .page-item.active {
+  background-color: var(--red-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+
+.dishes .container .pagination .page-item.active .page-link {
+  color: var(--white-color);
+}

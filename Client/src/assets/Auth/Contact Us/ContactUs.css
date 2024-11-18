@@ -1,0 +1,129 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# ContactUs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  width: 100%;
+  background-color: var(--bg-color);
+  min-height: calc(100vh - 125px);
+  background-image: url("../../imgs/Glow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ContactUs .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .ContactUs .container {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# ContactUs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .container .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# ContactUs left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+
+.ContactUs .container .left h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--purple-color);
+  text-shadow: var(--main-text-shadow);
+  font-weight: 600;
+}
+
+.ContactUs .container .left p {
+  color: var(--main-color);
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-align: justify;
+  width: 80%;
+}
+@media (max-width: 992px) {
+  .ContactUs .container .left h1 {
+    text-align: center;
+    justify-content: center;
+  }
+  .ContactUs .container .left p {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.ContactUs .container .left .contact-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ContactUs .container .left .contact-box .contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--main-transition);
+  font-weight: bold;
+  color: var(--gray-color);
+  cursor: pointer;
+  width: fit;
+}
+.ContactUs .container .contact-box .contact:hover {
+  color: var(--red-color);
+}
+
+.ContactUs .container .contact-box i {
+  width: 35px;
+  height: 35px;
+  background-color: var(--purple-color);
+  box-shadow: var(--main-text-shadow);
+  color: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.ContactUs .container .contact-box .contact:hover i {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# ContactUs right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.ContactUs .container .right {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactUs .container .right img {
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+}

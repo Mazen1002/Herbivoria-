@@ -1,0 +1,59 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# OurResturant
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.OurResturant {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 125px);
+  background-color: var(--bg-color);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-image: url("../../../imgs/Glow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OurResturant .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+.OurResturant .container h1 {
+  position: relative;
+  color: var(--purple-color);
+  font-size: 66px;
+}
+@media (max-width: 992) {
+  .OurResturant .container h1 {
+    font-size: 35px;
+  }
+}
+.OurResturant .container p {
+  position: relative;
+  color: var(--gray-color);
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 18px;
+  width: 800px;
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  .OurResturant .container,
+  .OurResturant .container p {
+    align-items: center;
+    text-align: center;
+  }
+  .OurResturant .container p {
+    width: 100%;
+  }
+}

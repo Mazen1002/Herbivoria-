@@ -1,0 +1,630 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  width: 100%;
+}
+.menu-food .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu links
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .links {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-nav a {
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-color);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-nav a:not(:first-child)::before {
+  position: absolute;
+  content: "\f105";
+  font-weight: 900;
+  font-family: "Font Awesome 5 free";
+  right: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-nav a.active {
+  color: var(--main-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu style-card
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .style-card {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.menu-food .container .style-card svg {
+  color: var(--gray-color);
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.menu-food .container .style-card svg.active {
+  color: var(--red-color);
+}
+.menu-food .container .style-card .Filter-Setting {
+  position: relative;
+  color: var(--gray-color);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 992px) {
+  .menu-food .container .style-card .Filter-Setting {
+    display: flex;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu content
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu content menu-controller
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .menu-controller {
+  position: sticky;
+  top: 62px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 10px;
+  padding: 20px;
+  min-width: 250px;
+  max-width: 250px;
+  transition: var(--main-transition);
+}
+
+.menu-food .container .menu-controller .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 0 20px 0;
+  width: 100%;
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+.menu-food .exit-menu-controller {
+  display: none;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .menu-food .container .menu-controller {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100% !important;
+    height: 100vh;
+    background-color: #ffffff82;
+    backdrop-filter: blur(15px);
+    z-index: -9;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: var(--main-transition);
+  }
+  .menu-food .container .menu-controller.active {
+    z-index: 9999999;
+    transform: scale(1);
+  }
+  .menu-food .container .menu-controller .box {
+    width: 350px;
+  }
+  .menu-food .exit-menu-controller {
+    position: absolute;
+    display: flex;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: #1976d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    border-radius: 5px;
+  }
+}
+.menu-food .container .menu-controller .box:not(:last-child) {
+  border-bottom: 1px solid var(--bg-color);
+}
+.menu-food .container .menu-controller .box h3 {
+  position: relative;
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-food .container .menu-controller .box .Slider {
+  color: var(--red-color);
+  font-size: 11px;
+}
+.css-eg0mwd-MuiSlider-thumb {
+  width: 14px !important;
+  height: 14px !important;
+}
+.menu-food .container .menu-controller .box .inputs-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.menu-food .container .menu-controller .box .inputs-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--main-color);
+  border: 1px solid var(--bg-color);
+  transition: var(--main-transition);
+  text-align: center;
+}
+.menu-food .container .menu-controller .box .inputs-box input:focus {
+  border: 0;
+  outline: 1px solid var(--gray-color);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-controller .box .inputs-box svg {
+  color: var(--bg-color);
+}
+.menu-food .container .menu-controller .box .CheckSpicy {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-controller .box .CheckSpicyinput {
+  display: none;
+}
+.menu-food .container .menu-controller .box .CheckSpicy::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  border-radius: 50%;
+  font-size: 11px;
+  border: 2px solid var(--bg-color);
+  transition: var(--main-transition);
+  transform: rotate(360deg) scale(1);
+}
+.menu-food
+  .container
+  .menu-controller
+  .box
+  input:checked
+  + .CheckSpicy::before {
+  content: "\f00c";
+  color: var(--white-color);
+  background-color: var(--red-color);
+  font-family: "Font Awesome 5 free";
+  font-family: 900;
+  transform: rotate(0deg) scale(0.9);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-controller .box .PoundSize {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.menu-food .container .menu-controller .box .PoundSize .info {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.menu-food .container .menu-controller .box .PoundSize .info span {
+  position: relative;
+  width: 100%;
+}
+.menu-food .container .menu-controller .box .PoundSize li {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  transition: var(--main-transition);
+  border: 1px solid var(--bg-color);
+}
+.menu-food .container .menu-controller .box .PoundSize input:checked + li {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+.menu-food .container .menu-controller .box .PoundSize li label {
+  width: 100%;
+  cursor: pointer;
+}
+.menu-food .container .menu-controller .box .PoundSize input {
+  display: none;
+}
+.menu-food .container .menu-controller .box .filter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.menu-food .container .menu-controller .box .filter i {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  background-color: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  color: var(--white-color);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-controller .box .filter i.active {
+  background-color: var(--red-color);
+}
+.menu-food .container .menu-controller .box.search {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+.menu-food .container .menu-controller .box.search > button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  width: 100%;
+  box-shadow: var(--main-box-shadow);
+  transition: var(--main-transition);
+}
+.menu-food .container .menu-controller .box.search > button:hover {
+  box-shadow: var(--main-box-shadow-red);
+  background-color: var(--red-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu content right grid
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .content .right.Grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-self: flex-start;
+  gap: 15px;
+  width: 100%;
+  transition: var(--main-transition);
+  overflow: hidden;
+  animation: up_box 0.5s ease-in-out alternate;
+}
+
+@media (max-width: 500px) {
+  .menu-food .container .content .right.Grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 5px;
+  }
+}
+
+.menu-food .container .content .right.Grid .food-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px dashed var(--bg-color);
+  height: 300px;
+}
+.menu-food .container .content .right.Grid .food-box a {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu-food .container .content .right.Grid .food-box .Favorite-ele {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--main-transition);
+  color: var(--gray-color);
+}
+.menu-food .container .content .right.Grid .food-box .Favorite-ele:hover {
+  font-weight: bold;
+  color: var(--red-color);
+}
+
+.menu-food .container .content .right.Grid .food-box img {
+  position: relative;
+  width: 150px;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  transition: var(--main-transition);
+}
+
+.menu-food .container .content .right.Grid .food-box h5 {
+  position: relative;
+  z-index: 2;
+  color: var(--red-color);
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+
+.menu-food .container .content .right.Grid .food-box p {
+  color: var(--gray-color);
+  z-index: 2;
+  font-size: 14px;
+  transition: var(--main-transition);
+}
+@media (max-width: 500px) {
+  .menu-food .container .content .right.Grid .food-box h5 {
+    font-size: 16px;
+  }
+  .menu-food .container .content .right.Grid .food-box p {
+    font-size: 12px;
+  }
+}
+
+.menu-food .container .content .right.Grid .food-box .actions {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.menu-food .container .content .right.Grid .food-box .actions .price {
+  position: relative;
+  color: var(--gray-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.menu-food .container .content .right.Grid .food-box .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: var(--main-transition);
+  color: var(--gray-color);
+  box-shadow: var(--main-box-shadow);
+}
+.menu-food .container .content .right.Grid .food-box .btn.active {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu content right List
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .content .right.List {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  transition: var(--main-transition);
+  overflow: hidden;
+  animation: up_box 0.5s ease-in-out alternate;
+}
+@keyframes up_box {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.menu-food .container .content .right.List .food-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px dashed var(--bg-color);
+}
+.menu-food .container .content .right.List .food-box .right {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-food .container .content .right.List .food-box .right .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-food .container .content .right.List .food-box .right .info h5 {
+  position: relative;
+  color: var(--red-color);
+  font-weight: 600;
+  font-size: 20px;
+}
+.menu-food .container .content .right.List .food-box .right .info p {
+  position: relative;
+  color: var(--gray-color);
+  width: 80%;
+  line-height: 1.7;
+}
+
+.menu-food .container .content .right.List .food-box .right .price {
+  color: var(--gray-color);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.menu-food .container .content .right.List .food-box .right .btn {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 14px;
+  transition: var(--main-transition);
+  box-shadow: var(--main-box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--gray-color);
+}
+.menu-food .container .content .right.List .food-box .right .btn.active {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+.menu-food .container .content .right.List .food-box img {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 992px) {
+  .menu-food .container .content .right.List .food-box .right {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+  .menu-food .container .content .right.List .food-box .right .info {
+    width: 100%;
+  }
+  .menu-food .container .content .right.List .food-box .right .info p {
+    width: 100%;
+    line-height: 1.3;
+  }
+  .menu-food .container .content .right.List .food-box .right .info.actions {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu nav-seemore
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .container .PaginationSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-food .container .PaginationSection .pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-food .container .PaginationSection .pagination .page-item {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--white-color);
+  transition: var(--main-transition);
+}
+.menu-food .container .PaginationSection .pagination .page-item .page-link {
+  color: var(--red-color);
+}
+
+.menu-food .container .PaginationSection .pagination .page-item.active {
+  background-color: var(--red-color);
+  box-shadow: var(--main-box-shadow-red);
+}
+
+.menu-food .container .pagination .page-item.active .page-link {
+  color: var(--white-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# menu Not Founded
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.menu-food .content .not-found {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
